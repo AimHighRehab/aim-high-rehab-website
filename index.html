@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Aim High Rehab | Dr John Beshay — Rehabilitation Consultant</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -230,6 +231,32 @@
     letter-spacing:0.08em; text-transform:uppercase; margin-top:10px;
   }
 
+  /* ===== MEDIA ===== */
+  .media-feature{
+    display:grid; grid-template-columns:1.1fr 0.9fr; gap:48px; align-items:center;
+  }
+  @media (max-width:860px){ .media-feature{grid-template-columns:1fr;} }
+  .video-frame{
+    position:relative; width:100%; aspect-ratio:16/9; background:#000;
+    border:1px solid var(--line-strong); overflow:hidden;
+  }
+  .video-frame iframe{ width:100%; height:100%; border:0; display:block; }
+  .media-copy .who{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--teal-dark); }
+  .media-copy h3{ font-size:1.35rem; margin:10px 0 14px; }
+  .media-copy p{ color:var(--ink-soft); font-size:0.98rem; margin-bottom:22px; }
+  .shorts-row{ margin-top:56px; }
+  .shorts-row h4{
+    font-family:'IBM Plex Mono',monospace; font-size:0.75rem; letter-spacing:0.1em;
+    text-transform:uppercase; color:var(--ink-soft); margin-bottom:20px;
+  }
+  .shorts-grid{
+    display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:20px;
+  }
+  .short-frame{
+    width:100%; aspect-ratio:9/16; background:#000; border:1px solid var(--line-strong); overflow:hidden;
+  }
+  .short-frame iframe{ width:100%; height:100%; border:0; display:block; }
+
   /* ===== REFERRALS ===== */
   .ref-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:36px; }
   @media (max-width:860px){ .ref-grid{grid-template-columns:1fr;} }
@@ -283,6 +310,7 @@
     <nav class="links">
       <a href="#about">About</a>
       <a href="#services">Services</a>
+      <a href="#media">Media</a>
       <a href="#referrals">Referrals</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -339,7 +367,7 @@
     <span class="cred-pill">Accredited Exercise Physiologist (ESSAM)</span>
     <span class="cred-pill">Comcare Approved</span>
     <span class="cred-pill">SIRA / Workcover Provider</span>
-    <span class="cred-pill">NDIS Accredited</span>
+    <span class="cred-pill">NDIS Registered Provider (Treatment)</span>
     <span class="cred-pill">NATA Accredited D&amp;A Tester</span>
     <span class="cred-pill">ACA Member</span>
   </div>
@@ -365,6 +393,7 @@
       <p>John is an experienced healthcare professional with over a decade of expertise in occupational rehabilitation, functional capacity evaluations, injury management, and medical treatment. His dual qualifications in Exercise Physiology and Chiropractic care allow him to assess and manage complex Workcover and SIRA claims with a holistic, evidence-based approach.</p>
       <p>He works closely with injured workers, insurers, and legal representatives to facilitate timely, durable return-to-work outcomes — drawing on deep experience in functional assessments, return-to-work planning, and injury prevention. John is particularly skilled in managing complex and stagnated claims, with a proven track record of navigating legal and insurance frameworks to reach optimal case resolutions.</p>
       <p>He has worked with a wide range of clients across ADF, DVA, healthcare, construction, and corporate sectors — building strong rapport with everyone in the claims process, from injured workers to insurers, employers, and legal teams.</p>
+      <p>Beyond one-on-one casework, John delivers Manual Handling training and injury prevention seminars for workplaces, conducts pre-employment physical assessments, and manages complex neurological and autoimmune presentations alongside standard rehabilitation. He is also a Registered NDIS Provider (Treatment), and has shared his approach to recovery on industry podcasts including AusRehab's <em>Behind the Claims Podcast</em>.</p>
     </div>
   </div>
 </section>
@@ -418,7 +447,58 @@
         <div><h3>Workplace Injury Prevention &amp; Education</h3><div class="tag">Prevention</div></div>
       </div>
 
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#2F6F64" stroke-width="1.4"><path d="M4 7 H20 M4 12 H20 M4 17 H14"/><circle cx="18" cy="17" r="2.5"/></svg>
+        <div><h3>Manual Handling Training &amp; Group Seminars</h3><div class="tag">Group training</div></div>
+      </div>
+
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#2F6F64" stroke-width="1.4"><circle cx="12" cy="5" r="2"/><path d="M12 7 V13 M12 13 L7 21 M12 13 L17 21 M7 10 L12 13 L17 10"/></svg>
+        <div><h3>Complex Neurological &amp; Autoimmune Condition Management</h3><div class="tag">Complex care</div></div>
+      </div>
+
     </div>
+  </div>
+</section>
+
+<section id="media" class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">In the Media</div>
+      <h2>Talking recovery, on and off the clock.</h2>
+      <p>John joined the Behind the Claims Podcast to talk about why some workplace injuries stall — and what actually gets people moving again.</p>
+    </div>
+
+    <div class="media-feature">
+      <div class="video-frame">
+        <iframe src="https://www.youtube.com/embed/jkIanSZW11g" title="Why Workplace Injuries Don't Improve | Chiropractor & EP Explain Recovery" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="media-copy">
+        <div class="who">Behind the Claims Podcast — Episode 09</div>
+        <h3>Why Workplace Injuries Don't Improve</h3>
+        <p>John sits down with the AusRehab team to unpack why some workplace injuries stall under standard care, the difference between exercise physiologists, chiropractors, and physios, and what actually helps injured workers get back to function.</p>
+        <a class="btn-ghost" href="https://www.youtube.com/watch?v=jkIanSZW11g" target="_blank" rel="noopener">Watch on YouTube →</a>
+      </div>
+    </div>
+
+    <div class="shorts-row">
+      <h4>More clips from the podcast</h4>
+      <div class="shorts-grid">
+        <div class="short-frame">
+          <iframe src="https://www.youtube.com/embed/4GfcsVdrlBU" title="Why Workplace Injuries Don't Improve | Stop Sabotaging Your Recovery" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="short-frame">
+          <iframe src="https://www.youtube.com/embed/vno0ZZ3NPT4" title="Do Rehab Consultants Work for Lawyers - Australia" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="short-frame">
+          <iframe src="https://www.youtube.com/embed/i6rEeirYz_o" title="Stretches for Desk Job" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="short-frame">
+          <iframe src="https://www.youtube.com/embed/YoEIkc_FGTQ" title="Strength Training and Cardio - Injury Recovery" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -431,7 +511,7 @@
     </div>
     <div class="ref-grid">
       <div class="ref-card">
-        <div class="who">GPs</div>
+        <div class="who">Referring Doctors</div>
         <h3>Clear reporting back to you</h3>
         <p>Straightforward functional updates so you can make informed decisions on certificates, referrals, and treatment plans without needing to decode jargon.</p>
       </div>
