@@ -160,17 +160,25 @@
   .arc-tick.major{ stroke:var(--ink-soft); stroke-width:1.4; }
   .arc-needle{
     transform-origin:190px 190px;
-    animation:sweep 2.4s cubic-bezier(.2,.8,.2,1) 0.2s both;
+    animation:sweep 3.2s cubic-bezier(.4,0,.2,1) 0.2s infinite alternate;
   }
   @keyframes sweep{
-    from{ transform:rotate(-58deg); }
-    to{ transform:rotate(0deg); }
+    from{ transform:rotate(-90deg); }
+    to{ transform:rotate(90deg); }
   }
   .arc-label{
     font-family:'IBM Plex Mono',monospace; font-size:11px; fill:var(--ink-soft); letter-spacing:0.06em;
   }
   .arc-value{
     font-family:'Fraunces',serif; font-size:34px; fill:var(--ink); font-weight:600;
+  }
+  .arc-value.zero{ animation: fadeZero 3.2s ease-in-out 0.2s infinite alternate; }
+  .arc-value.full{ animation: fadeFull 3.2s ease-in-out 0.2s infinite alternate; }
+  @keyframes fadeZero{
+    0%{ opacity:1; } 30%{ opacity:0; } 100%{ opacity:0; }
+  }
+  @keyframes fadeFull{
+    0%{ opacity:0; } 70%{ opacity:0; } 100%{ opacity:1; }
   }
 
   /* ===== CREDENTIAL STRIP ===== */
@@ -353,8 +361,9 @@
             <line x1="190" y1="190" x2="190" y2="52" stroke="#B8863B" stroke-width="2.5" stroke-linecap="round"/>
             <circle cx="190" cy="190" r="6" fill="#1C2B33"/>
           </g>
-          <text x="190" y="150" text-anchor="middle" class="arc-value">122°</text>
-          <text x="190" y="230" text-anchor="middle" class="arc-label">FUNCTIONAL RANGE — AF SHOULDER FLEX</text>
+          <text x="190" y="150" text-anchor="middle" class="arc-value zero">ZERO</text>
+          <text x="190" y="150" text-anchor="middle" class="arc-value full">FULL</text>
+          <text x="190" y="230" text-anchor="middle" class="arc-label">RANGE OF MOTION → RANGE OF LIFE</text>
         </g>
       </svg>
     </div>
