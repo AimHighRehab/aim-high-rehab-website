@@ -138,7 +138,7 @@
         </div>
         <div class="field">
           <label for="c-scheme">Insurer / scheme</label>
-          <select id="c-scheme" name="c-scheme">
+          <select id="c-scheme" name="c-scheme" onchange="document.getElementById('c-scheme-other-wrap').style.display = this.value === 'Other' ? 'block' : 'none';">
             <option value="">Select one</option>
             <option>Workcover</option>
             <option>SIRA</option>
@@ -147,6 +147,9 @@
             <option>Private</option>
             <option>Other</option>
           </select>
+          <div id="c-scheme-other-wrap" style="display:none; margin-top:10px;">
+            <input id="c-scheme-other" name="c-scheme-other" type="text" placeholder="Please specify">
+          </div>
         </div>
       </div>
     </fieldset>
@@ -222,7 +225,7 @@
       + 'Name: ' + val('c-name') + '\n'
       + 'Date of birth: ' + val('c-dob') + '\n'
       + 'Claim number: ' + val('c-claim') + '\n'
-      + 'Insurer / scheme: ' + val('c-scheme') + '\n\n'
+      + 'Insurer / scheme: ' + val('c-scheme') + (f['c-scheme'].value === 'Other' && val('c-scheme-other') !== '—' ? ' (' + val('c-scheme-other') + ')' : '') + '\n\n'
       + 'REFERRAL DETAILS\n'
       + 'Service requested: ' + val('service') + '\n'
       + 'Urgency: ' + val('urgency') + '\n\n'
