@@ -215,6 +215,7 @@
     var subject = 'New Referral — ' + val('c-name');
 
     var body = ''
+      + '>>> PLEASE ATTACH ANY REFERRAL LETTERS OR REPORTS TO THIS EMAIL BEFORE SENDING <<<\n\n'
       + 'REFERRER DETAILS\n'
       + 'Name: ' + val('r-name') + '\n'
       + 'Role: ' + val('r-role') + '\n'
@@ -230,8 +231,7 @@
       + 'Service requested: ' + val('service') + '\n'
       + 'Urgency: ' + val('urgency') + '\n\n'
       + 'SUMMARY\n'
-      + val('summary') + '\n\n'
-      + '(Please attach any referral letters or reports before sending this email.)';
+      + val('summary');
 
     var mailto = 'mailto:referrals@aimhighrehab.com.au'
       + '?subject=' + encodeURIComponent(subject)
