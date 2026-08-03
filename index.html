@@ -226,6 +226,9 @@
   }
   @media (max-width:900px){ .service-grid{grid-template-columns:repeat(2,1fr);} }
   @media (max-width:600px){ .service-grid{grid-template-columns:1fr;} }
+  .service-card:last-child{ grid-column: span 3; }
+  @media (max-width:900px){ .service-card:last-child{ grid-column: span 2; } }
+  @media (max-width:600px){ .service-card:last-child{ grid-column: span 1; } }
   .service-card{
     background:var(--paper-raised); padding:32px 28px; min-height:190px;
     display:flex; flex-direction:column; justify-content:space-between;
@@ -474,6 +477,11 @@
       <div class="service-card">
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#2F6F64" stroke-width="1.4"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11 C5 15.5 8.5 18 12 18 C15.5 18 19 15.5 19 11 M12 18 V22 M8 22 H16"/></svg>
         <div><h3>Podcast Guest Appearances &amp; Public Speaking</h3><div class="tag">Media</div></div>
+      </div>
+
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#2F6F64" stroke-width="1.4"><path d="M3 12 L12 4 L21 12"/><path d="M5 10 V20 H19 V10"/><path d="M9 20 V14 H15 V20"/></svg>
+        <div><h3>Mobile Exercise Physiology &amp; Chiropractic Care</h3><div class="tag">We come to you</div></div>
       </div>
 
     </div>
