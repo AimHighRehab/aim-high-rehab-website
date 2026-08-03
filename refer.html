@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Referral Form | Aim High Rehab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1C2B33; --ink-soft:#3E4F58; --paper:#F2F3EE; --paper-raised:#FFFFFF;
+    --teal:#2F6F64; --teal-dark:#1F4E46; --ochre:#B8863B; --line:#D8DAD2; --line-strong:#C3C6BC;
+  }
+  *{box-sizing:border-box;}
+  body{ margin:0; background:var(--paper); color:var(--ink); font-family:'Inter',sans-serif; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3{ font-family:'Fraunces',serif; font-weight:600; color:var(--ink); letter-spacing:-0.01em; margin:0; }
+  a{ color:var(--teal-dark); }
+  .wrap{ max-width:760px; margin:0 auto; padding:0 28px; }
+  header{ border-bottom:1px solid var(--line); background:var(--paper-raised); }
+  .nav{ display:flex; align-items:center; justify-content:space-between; padding:20px 0; max-width:760px; margin:0 auto; padding-left:28px; padding-right:28px; }
+  .logo{ font-family:'Fraunces',serif; font-weight:600; font-size:1.05rem; text-decoration:none; color:var(--ink); }
+  .back{ font-family:'IBM Plex Mono',monospace; font-size:0.78rem; text-decoration:none; color:var(--ink-soft); border:1px solid var(--line-strong); padding:8px 16px; }
+  .back:hover{ color:var(--ink); border-color:var(--ink); }
+  .eyebrow{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--teal-dark); display:flex; align-items:center; gap:0.6em; margin:48px 0 14px; }
+  .eyebrow::before{ content:""; width:22px; height:1px; background:var(--ochre); display:inline-block; }
+  h1.page-title{ font-size:clamp(1.8rem,4vw,2.4rem); line-height:1.15; margin-bottom:14px; }
+  .dek{ font-size:1.05rem; color:var(--ink-soft); max-width:56ch; margin-bottom:44px; }
+  form{ margin-bottom:64px; }
+  fieldset{ border:none; padding:0; margin:0 0 40px; }
+  legend{ font-family:'IBM Plex Mono',monospace; font-size:0.75rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--teal-dark); padding:0 0 16px; width:100%; border-bottom:1px solid var(--line); margin-bottom:24px; }
+  .field-row{ display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:20px; }
+  @media (max-width:600px){ .field-row{ grid-template-columns:1fr; } }
+  .field{ display:flex; flex-direction:column; }
+  .field.full{ grid-column:1 / -1; }
+  label{ font-size:0.85rem; font-weight:600; margin-bottom:7px; color:var(--ink); }
+  label .opt{ font-weight:400; color:var(--ink-soft); font-size:0.78rem; }
+  input, select, textarea{
+    font-family:'Inter',sans-serif; font-size:0.95rem; color:var(--ink);
+    border:1px solid var(--line-strong); border-radius:2px; padding:11px 12px;
+    background:var(--paper-raised); width:100%;
+  }
+  input:focus, select:focus, textarea:focus{ outline:none; border-color:var(--teal-dark); }
+  textarea{ resize:vertical; min-height:110px; font-family:'Inter',sans-serif; }
+  select{ appearance:none; background:var(--paper-raised) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6"><path d="M0 0l5 6 5-6z" fill="%233E4F58"/></svg>') no-repeat right 14px center; }
+  .note-box{
+    background:var(--paper-raised); border:1px solid var(--line); border-left:2px solid var(--ochre);
+    padding:18px 20px; font-size:0.9rem; color:var(--ink-soft); margin-bottom:36px;
+  }
+  .submit-btn{
+    background:var(--teal-dark); color:#fff; border:none; font-family:'IBM Plex Mono',monospace;
+    font-size:0.85rem; letter-spacing:0.03em; text-transform:uppercase; padding:15px 30px;
+    cursor:pointer; border-radius:2px; width:100%;
+  }
+  .submit-btn:hover{ background:var(--teal); }
+  @media (min-width:560px){ .submit-btn{ width:auto; } }
+  .submit-note{ font-size:0.82rem; color:var(--ink-soft); margin-top:14px; }
+  footer{ border-top:1px solid var(--line); padding:40px 0 60px; }
+  footer .wrap{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; }
+  .fname{ font-family:'Fraunces',serif; font-weight:600; }
+  .fmeta{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--ink-soft); }
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a class="logo" href="index.html">Aim High Rehab</a>
+    <a class="back" href="index.html#contact">← Back to site</a>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="eyebrow">Referrals</div>
+  <h1 class="page-title">Refer a client or patient</h1>
+  <p class="dek">Fill in the details below and this form will open your email app with everything filled in for you — just attach any referral letters or reports before hitting send.</p>
+
+  <div class="note-box">
+    This form doesn't upload or store anything on our end — it simply drafts an email to <strong>referrals@aimhighrehab.com.au</strong> with your answers pre-filled. Your email app will open when you submit, and you can attach documents there directly.
+  </div>
+
+  <form id="referral-form">
+    <fieldset>
+      <legend>Your details</legend>
+      <div class="field-row">
+        <div class="field">
+          <label for="r-name">Your name</label>
+          <input id="r-name" name="r-name" type="text" required>
+        </div>
+        <div class="field">
+          <label for="r-role">Your role</label>
+          <select id="r-role" name="r-role" required>
+            <option value="">Select one</option>
+            <option>General Practitioner</option>
+            <option>Case Manager</option>
+            <option>Insurer</option>
+            <option>Legal Representative</option>
+            <option>Fellow Practitioner</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="r-org">Organisation <span class="opt">(optional)</span></label>
+          <input id="r-org" name="r-org" type="text">
+        </div>
+        <div class="field">
+          <label for="r-phone">Phone</label>
+          <input id="r-phone" name="r-phone" type="tel" required>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field full">
+          <label for="r-email">Email</label>
+          <input id="r-email" name="r-email" type="email" required>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Client / patient details</legend>
+      <div class="field-row">
+        <div class="field">
+          <label for="c-name">Client name</label>
+          <input id="c-name" name="c-name" type="text" required>
+        </div>
+        <div class="field">
+          <label for="c-dob">Date of birth <span class="opt">(optional)</span></label>
+          <input id="c-dob" name="c-dob" type="date">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="c-claim">Claim number <span class="opt">(optional)</span></label>
+          <input id="c-claim" name="c-claim" type="text">
+        </div>
+        <div class="field">
+          <label for="c-scheme">Insurer / scheme</label>
+          <select id="c-scheme" name="c-scheme">
+            <option value="">Select one</option>
+            <option>Workcover</option>
+            <option>SIRA</option>
+            <option>NDIS</option>
+            <option>ADF / DVA</option>
+            <option>Private</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Referral details</legend>
+      <div class="field-row">
+        <div class="field">
+          <label for="service">Service requested</label>
+          <select id="service" name="service" required>
+            <option value="">Select one</option>
+            <option>Workcover &amp; SIRA Functional Capacity Assessment</option>
+            <option>Medico-Legal &amp; Independent Functional Assessment</option>
+            <option>Workplace &amp; Ergonomic Assessment</option>
+            <option>Pre-Employment &amp; Fitness for Work Evaluation</option>
+            <option>Chronic Injury &amp; Pain Management</option>
+            <option>Case Management for Stagnated &amp; Complex Claims</option>
+            <option>Job Seeking Services</option>
+            <option>Workplace Injury Prevention &amp; Education</option>
+            <option>Manual Handling Training &amp; Group Seminars</option>
+            <option>Complex Neurological &amp; Autoimmune Condition Management</option>
+            <option>NATA-Accredited Drug &amp; Alcohol Testing</option>
+            <option>Mobile EP &amp; Chiropractic Care</option>
+            <option>Mentoring / Coaching for Practitioners</option>
+            <option>Not sure — please advise</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="urgency">Urgency</label>
+          <select id="urgency" name="urgency" required>
+            <option value="">Select one</option>
+            <option>Standard</option>
+            <option>Urgent</option>
+          </select>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field full">
+          <label for="summary">Brief summary of the case / reason for referral</label>
+          <textarea id="summary" name="summary" required placeholder="Injury type, current status, what you're hoping to achieve with this referral..."></textarea>
+        </div>
+      </div>
+    </fieldset>
+
+    <button type="submit" class="submit-btn">Continue to email →</button>
+    <p class="submit-note">This opens your default email app with everything filled in. Nothing is sent or stored until you press send in your own email client.</p>
+  </form>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="fname">Aim High Rehab</div>
+    <div class="fmeta">AHPRA · ESSA · COMCARE · SIRA · NDIS · NATA · ACA</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('referral-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var f = e.target;
+    var val = function(id){ return f[id] && f[id].value ? f[id].value : '—'; };
+
+    var subject = 'New Referral — ' + val('c-name');
+
+    var body = ''
+      + 'REFERRER DETAILS\n'
+      + 'Name: ' + val('r-name') + '\n'
+      + 'Role: ' + val('r-role') + '\n'
+      + 'Organisation: ' + val('r-org') + '\n'
+      + 'Phone: ' + val('r-phone') + '\n'
+      + 'Email: ' + val('r-email') + '\n\n'
+      + 'CLIENT / PATIENT DETAILS\n'
+      + 'Name: ' + val('c-name') + '\n'
+      + 'Date of birth: ' + val('c-dob') + '\n'
+      + 'Claim number: ' + val('c-claim') + '\n'
+      + 'Insurer / scheme: ' + val('c-scheme') + '\n\n'
+      + 'REFERRAL DETAILS\n'
+      + 'Service requested: ' + val('service') + '\n'
+      + 'Urgency: ' + val('urgency') + '\n\n'
+      + 'SUMMARY\n'
+      + val('summary') + '\n\n'
+      + '(Please attach any referral letters or reports before sending this email.)';
+
+    var mailto = 'mailto:referrals@aimhighrehab.com.au'
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(body);
+
+    window.location.href = mailto;
+  });
+</script>
+
+</body>
+</html>
