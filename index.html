@@ -226,8 +226,8 @@
   }
   @media (max-width:900px){ .service-grid{grid-template-columns:repeat(2,1fr);} }
   @media (max-width:600px){ .service-grid{grid-template-columns:1fr;} }
-  .service-card:last-child{ grid-column: span 3; }
-  @media (max-width:900px){ .service-card:last-child{ grid-column: span 2; } }
+  .service-card:last-child{ grid-column: span 2; }
+  @media (max-width:900px){ .service-card:last-child{ grid-column: span 1; } }
   @media (max-width:600px){ .service-card:last-child{ grid-column: span 1; } }
   .service-card{
     background:var(--paper-raised); padding:32px 28px; min-height:190px;
@@ -267,6 +267,21 @@
     width:100%; aspect-ratio:9/16; background:#000; border:1px solid var(--line-strong); overflow:hidden;
   }
   .short-frame iframe{ width:100%; height:100%; border:0; display:block; }
+
+  /* ===== INSIGHTS ===== */
+  .insights-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+  @media (max-width:900px){ .insights-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:600px){ .insights-grid{grid-template-columns:1fr;} }
+  .insight-card{
+    background:var(--paper-raised); padding:30px 26px; display:flex; flex-direction:column;
+    justify-content:space-between; min-height:220px; text-decoration:none; color:var(--ink);
+    transition:background 0.2s ease;
+  }
+  .insight-card:hover{ background:#EDF3F1; }
+  .insight-card .icat{ font-family:'IBM Plex Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--teal-dark); margin-bottom:14px; }
+  .insight-card h3{ font-size:1.05rem; line-height:1.35; margin:0 0 12px; }
+  .insight-card p{ font-size:0.88rem; color:var(--ink-soft); margin:0; }
+  .insight-card .read{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--ochre); margin-top:18px; }
 
   /* ===== REFERRALS ===== */
   .ref-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:36px 48px; }
@@ -322,6 +337,7 @@
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#media">Media</a>
+      <a href="#insights">Insights</a>
       <a href="#referrals">Referrals</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -484,6 +500,11 @@
         <div><h3>Mobile Exercise Physiology &amp; Chiropractic Care</h3><div class="tag">We come to you</div></div>
       </div>
 
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#2F6F64" stroke-width="1.4"><circle cx="12" cy="7" r="3"/><path d="M6 21 C6 17 8.5 15 12 15 C15.5 15 18 17 18 21"/><path d="M17 4 C18.5 4.5 19.5 5.8 19.5 7.5 C19.5 9 18.7 10 17.5 10.5"/></svg>
+        <div><h3>Mentoring &amp; Coaching for Rehab Consultants and Allied Health Professionals</h3><div class="tag">Mentoring</div></div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -526,6 +547,73 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<section id="insights">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Insights</div>
+      <h2>Stories and explainers from the clinic floor.</h2>
+      <p>Real experience from workplace claims, ADF files, and complex cases — written to be useful to referrers and patients alike.</p>
+    </div>
+    <div class="insights-grid">
+
+      <a class="insight-card" href="insights/why-i-do-this-work.html">
+        <div>
+          <div class="icat">About John</div>
+          <h3>Why I Do This Work</h3>
+          <p>How a family workplace injury and a failed run of treatment led me into rehab.</p>
+        </div>
+        <div class="read">Read the story →</div>
+      </a>
+
+      <a class="insight-card" href="insights/ep-chiro-osteo-physio-differences.html">
+        <div>
+          <div class="icat">Explainer</div>
+          <h3>EP, Chiropractor, Osteopath, Physio: What's Actually Different?</h3>
+          <p>The question I get asked more than any other — answered properly.</p>
+        </div>
+        <div class="read">Read the story →</div>
+      </a>
+
+      <a class="insight-card" href="insights/workplace-drug-alcohol-testing-explained.html">
+        <div>
+          <div class="icat">Workplace Safety</div>
+          <h3>What Actually Happens During a Drug &amp; Alcohol Test</h3>
+          <p>Chain of custody, non-negative results, and why testing isn't about punishment.</p>
+        </div>
+        <div class="read">Read the story →</div>
+      </a>
+
+      <a class="insight-card" href="insights/rehab-inside-the-adf-and-dva-system.html">
+        <div>
+          <div class="icat">ADF / DVA</div>
+          <h3>Inside ADF and DVA Rehab</h3>
+          <p>What civilian providers rarely see — and the handover gap that worries me most.</p>
+        </div>
+        <div class="read">Read the story →</div>
+      </a>
+
+      <a class="insight-card" href="insights/why-rest-isnt-always-the-answer.html">
+        <div>
+          <div class="icat">Recovery</div>
+          <h3>Why "Just Rest It" Is Sometimes the Worst Advice</h3>
+          <p>The Panadol analogy, and why avoidance builds its own problems.</p>
+        </div>
+        <div class="read">Read the story →</div>
+      </a>
+
+      <a class="insight-card" href="insights/the-hidden-cost-of-being-believed.html">
+        <div>
+          <div class="icat">Recovery</div>
+          <h3>The Hidden Cost of Being Believed</h3>
+          <p>Why being taken seriously by coworkers matters as much as the treatment itself.</p>
+        </div>
+        <div class="read">Read the story →</div>
+      </a>
+
+    </div>
   </div>
 </section>
 
